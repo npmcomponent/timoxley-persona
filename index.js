@@ -4,7 +4,7 @@ var classes = require('classes')
 var Emitter = require('emitter')
 var debug = require('debug')
 var template = require('./template').trim()
-
+var nextTick = require('next-tick')
 var persona = undefined
 var log = debug('persona')
 
@@ -52,7 +52,9 @@ Persona.prototype.init = function() {
 }
 
 Persona.prototype.button = function(options) {
-  return new PersonaButton(options)
+  var button = new PersonaButton(options)
+  nextTick(button.render.bind(button))
+  return button
 }
 
 Persona.prototype.login = function() {
@@ -67,13 +69,11 @@ Persona.prototype.logout = function() {
 
 
 function PersonaButton(options) {
-  if (typeof options === 'string') this.color = options
-  this.color = this.color || 'black'
   if (options instanceof HTMLElement) this.el = options
   options = options || {}
-  this.color = options.color || this.color
-  this.el = options.el || this.el || this.render()
-  classes(this.el).add(this.color)
+  this.color = options.color || 'black'
+  this.style = options.style || 'persona'
+  this.el = options.el || this.el || domify(template)[0]
 
   this.el.addEventListener('click', function(e) {
     e.preventDefault()
@@ -82,6 +82,38 @@ function PersonaButton(options) {
   }.bind(this))
 }
 
+PersonaButton.prototype.black = function() {
+  this.color = 'black'
+  return this
+}
+PersonaButton.prototype.blue = function() {
+  this.color = 'blue'
+  return this
+}
+PersonaButton.prototype.red = function() {
+  this.color = 'red'
+  return this
+}
+
+PersonaButton.prototype.persona = function() {
+  this.style = 'persona'
+  return this
+}
+
+PersonaButton.prototype.email = function() {
+  this.style = 'email'
+  return this
+}
+
+PersonaButton.prototype.plain = function() {
+  this.style = 'plain'
+  return this
+}
+
 PersonaButton.prototype.render = function() {
-  return domify(template)[0]
+  classes(this.el)
+    .add('persona-button')
+    .add('persona-' + this.style)
+    .add('persona-' + this.color)
+  return this
 }

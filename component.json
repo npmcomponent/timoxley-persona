@@ -6,6 +6,7 @@
   "keywords": [],
   "dependencies": {
     "timoxley/script-loader": "*",
+    "timoxley/next-tick": "*",
     "component/emitter": "*",
     "component/domify": "*",
     "component/classes": "*",
@@ -19,5 +20,16 @@
   ],
   "styles": [
     "persona.css"
+  ],
+  "images": [
+		"images/email_sign_in_black.png",
+		"images/email_sign_in_red.png",
+		"images/persona_sign_in_blue.png",
+		"images/plain_sign_in_black.png",
+		"images/plain_sign_in_red.png",
+		"images/email_sign_in_blue.png",
+		"images/persona_sign_in_black.png",
+		"images/persona_sign_in_red.png",
+		"images/plain_sign_in_blue.png"
   ]
 }

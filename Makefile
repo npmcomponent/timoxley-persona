@@ -1,5 +1,5 @@
 
-build: components index.js persona.css template.js
+build: components index.js persona.css template.js images
 	@component build --dev
 
 template.js: template.html

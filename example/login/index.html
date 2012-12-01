@@ -7,7 +7,7 @@
   <script src="../../build/build.js"></script>
   <script>
     var persona = require('persona')()
-    document.body.appendChild(persona.button().el)
+    document.body.appendChild(persona.button().red().persona().el)
     persona.load(function(err) {
       if (err) return console.error(err)
     })
