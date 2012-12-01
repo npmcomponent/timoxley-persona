@@ -1,0 +1,23 @@
+{
+  "name": "persona",
+  "repo": "timoxley/persona",
+  "description": "Persona Authentication",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "timoxley/script-loader": "*",
+    "component/emitter": "*",
+    "component/domify": "*",
+    "component/classes": "*",
+    "visionmedia/debug": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "persona.css"
+  ]
+}

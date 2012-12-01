@@ -1,0 +1,1 @@
+module.exports = '  <a href="#" class="persona-button"><span>Sign in with your Email</span></a>\n';
