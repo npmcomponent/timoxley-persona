@@ -32,7 +32,7 @@ Persona.prototype.load = function(fn) {
     this.init()
     this.loaded = true
     this.emit('loaded')
-    if (this.doLogin) this.login()
+    if (this.doLogin && !this.doLogout) this.login()
     if (this.doLogout) this.logout()
   }.bind(this))
   return this
