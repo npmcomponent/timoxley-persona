@@ -58,12 +58,12 @@ Persona.prototype.button = function(options) {
 }
 
 Persona.prototype.login = function() {
-  if (!navigator.id) this.doLogin = true // do later
+  if (!navigator.id) return this.doLogin = true // do later
   return navigator.id.request()
 }
 
 Persona.prototype.logout = function() {
-  if (!navigator.id) this.doLogout = true // do later
+  if (!navigator.id) return this.doLogout = true // do later
   return navigator.id.request()
 }
 
