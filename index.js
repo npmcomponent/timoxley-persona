@@ -1,10 +1,10 @@
-var load = require('script-loader')
-var domify = require('domify')
-var classes = require('classes')
-var Emitter = require('emitter')
-var debug = require('debug')
+var load = require('timoxley-script-loader')
+var domify = require('component-domify')
+var classes = require('component-classes')
+var Emitter = require('component-emitter')
+var debug = require('visionmedia-debug')
 var template = require('./template').trim()
-var nextTick = require('next-tick')
+var nextTick = require('timoxley-next-tick')
 var persona = undefined
 var log = debug('persona')
 

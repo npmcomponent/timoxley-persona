@@ -1,0 +1,18 @@
+{
+  "name": "timoxley-persona",
+  "description": "Persona Authentication",
+  "version": "0.0.3",
+  "keywords": [],
+  "styles": [
+    "persona.css"
+  ],
+  "dependencies": {
+    "timoxley-script-loader": "git://github.com/npmcomponent/timoxley-script-loader.git",
+    "timoxley-next-tick": "git://github.com/npmcomponent/timoxley-next-tick.git",
+    "component-emitter": "git://github.com/npmcomponent/component-emitter.git",
+    "component-domify": "git://github.com/npmcomponent/component-domify.git",
+    "component-classes": "git://github.com/npmcomponent/component-classes.git",
+    "visionmedia-debug": "git://github.com/npmcomponent/visionmedia-debug.git"
+  },
+  "license": "MIT"
+}
